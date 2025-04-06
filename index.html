@@ -65,7 +65,7 @@
         <h5 class="text-sm md:text-2xl font-bold text-[rgba(19,19,19,0.6)]">Bringing Families Together ❤️</h5>
         <h1 class="text-sm md:text-7xl font-bold">Your Path to Adoption <br> Starts Here</h1>
         <p class="text-base">It is a long established fact that a reader will be distracted by the readable content of a page when looking <br>at its layout. The point of using Lorem Ipsum is that it has a.</p>
-        <button class="btn bg-[#0E7A81] text-white">View More</button>
+        <button class="btn bg-[#0E7A81] text-white" ><a href="#adopt-section"> View More</a></button>
         <div>
             <img src="images/pet.webp" alt="" srcset="">
         </div>
@@ -84,15 +84,35 @@
     </div>
 
     <!-- categories -->
-     <div id="categories" class="flex justify-around mt-10 items-center">
+     <div id="categories" class="flex justify-between mt-10 items-center">
 
      </div>
+     <!-- show pets -->
+      <div id="showPets">
+        <!-- sort price -->
+        <div class="mt-10 flex justify-between items-center gap-4 text-center">
+            <h4 class="text-sm md:text-2xl font-bold">Best Deal For you</h4>
+            <button class="btn bg-[#0E7A81] text-white" >Sort By Price</button>
+            
+        </div>
 
+        <!-- pets  -->
+
+        <div class="grid grid-cols-4 gap-4 mt-10  ">
+            <div class="col-span-3 p-4 border border-[rgba(19,19,19,0.1)] rounded grid grid-cols-3 gap-4" id="petsDiv">
+                
+            </div>
+            <!-- add pets -->
+            <div class="p-4 border  border-[rgba(19,19,19,0.1)] rounded">04</div>
+
+        </div>
+      </div>
  </section>
 
 </main>
 
 
 <script src="scripts/categories.js"></script>
+<script src="scripts/pets.js"></script>
 </body>
 </html>
