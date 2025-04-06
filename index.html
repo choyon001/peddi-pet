@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ 
+
+<!-- daisi ui -->
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+<!-- google font -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/style.css">
+
+
+<!-- custom designs -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+            "primary-color": "#0E7A81",
+            
+          },
+        },
+      },
+    };
+  </script>
+    <title>paddy pet</title>
+</head>
+<body >
+    <!-- nav bar section -->
+    <nav class="flex items-center justify-between mx-auto w-11/12 bg-base-100 ">
+        <div class="flex justify-center items-center gap-2">
+            <img src="images/logo.webp" alt="" srcset="" class="hidden md:block ">
+            <a class=" text-xl font-bold">Peddy</a>
+        </div>
+        <div class="">
+            <ul class="menu menu-horizontal p-0">
+                <li><a href="#" class="text-[rgba(19,19,19,.5)]">Home</a></li>
+                <li><a href="#" class="text-[rgba(19,19,19,.5)]">Shop</a></li>
+                <li><a href="#" class="text-[rgba(19,19,19,.5)]">Contact</a></li>
+            </ul>
+        </div>
+        <div class="">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[rgba(19,19,19,.5)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A9 9 0 1118.879 6.196a9 9 0 01-13.758 11.608zM12 14a4 4 0 100-8 4 4 0 000 8zm0 2c-2.21 0-4.2.895-5.657 2.343A8.963 8.963 0 0012 21a8.963 8.963 0 005.657-2.657A7.963 7.963 0 0012 16z" />
+            </svg>
+        </div>
+    </nav>
+
+
+<main>
+<!-- view more section -->
+<section id="view-more-section" class="w-11/12 mx-auto">
+    <div class="flex flex-col justify-center items-center gap-4 text-center mt-15">
+        <h5 class="text-sm md:text-2xl font-bold text-[rgba(19,19,19,0.6)]">Bringing Families Together ❤️</h5>
+        <h1 class="text-sm md:text-7xl font-bold">Your Path to Adoption <br> Starts Here</h1>
+        <p class="text-base">It is a long established fact that a reader will be distracted by the readable content of a page when looking <br>at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        <button class="btn bg-[#0E7A81] text-white">View More</button>
+        <div>
+            <img src="images/pet.webp" alt="" srcset="">
+        </div>
+    </div>
+
+</section>
+
+<!-- adopt section -->
+ <section id="adopt-section" class="w-11/12 mx-auto">
+    <!-- intro -->
+    <div class="flex flex-col justify-center items-center gap-4 text-center mt-15">
+       
+        <h1 class="text-sm md:text-4xl font-bold">Adopt  Your  Best Friend</h1>
+        <p class="text-base">It is a long established fact that a reader will be distracted by the readable content of a <br>page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        
+    </div>
+
+    <!-- categories -->
+     <div id="categories" class="flex justify-around mt-10 items-center">
+
+     </div>
+
+ </section>
+
+</main>
+
+
+<script src="scripts/categories.js"></script>
+</body>
+</html>
