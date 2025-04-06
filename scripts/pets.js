@@ -13,18 +13,29 @@ const displaypets = (pets) => {
         const div = document.createElement("div");
         div.classList = "card ";
         div.innerHTML = `
-        <div class="card bg-base-100  shadow-sm">
-                        <figure class="px-10 pt-10">
+        <div class="card bg-[rgba(19, 19, 19, 0.1)]  shadow-sm">
+                        <figure class="px-5 pt-5">
                           <img
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            src="${pet.image}"
                             alt="Shoes"
                             class="rounded-xl" />
                         </figure>
-                        <div class="card-body items-center text-center">
-                          <h2 class="card-title">Card Title</h2>
-                          <p>A card component has a figure, a body part, and inside body there are title and actions parts </p>
+                        <div class="card-body items-start ">
+                          <h2 class="text-xl font-bold">${pet.pet_name?pet.pet_name:"Not Avaiable"}</h2>
+                          <p class="text-base text-[rgba(19,19,19,0.7)] flex gap-2 items-center"> <img src="images/category.png" class="w-5 h-5"> Breed: ${pet.breed?pet.breed:"Not Available"} </p>
+
+                          <p class="text-base text-[rgba(19,19,19,0.7)] flex gap-2 items-center"> <img src="images/birthday.png" class="w-5 h-5">Birth: ${pet.date_of_birth?pet.date_of_birth:"Not Available"} </p>
+
+                          <p class="text-base text-[rgba(19,19,19,0.7)] flex gap-2 items-center"> <img src="images/femenine.png" class="w-5 h-5">Gender: ${pet.gender?pet.gender:"Not Available"} </p>
+
+                          <p class="text-base text-[rgba(19,19,19,0.7)] flex gap-2 items-center"> <img src="images/coin.png" class="w-5 h-5">Price : ${pet.price?pet.price:"N/A"}$ </p>
+
+                          <hr class="border w-11/12 border-[rgba(19,19,19,0.1)] ">
                           <div class="card-actions">
-                            <button class="btn btn-primary">Buy Now</button>
+                          <button class="btn bg-white"><img src="images/like.png" alt="like" class="w-5 h-5 "></button>
+                          
+                            <button class="btn bg-white text-[#0E7A81]">Adopt</button>
+                            <button class="btn bg-white text-[#0E7A81]">Details</button>
                           </div>
                         </div>
                       </div>
