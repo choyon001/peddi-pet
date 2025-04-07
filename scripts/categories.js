@@ -13,10 +13,24 @@ const displaycategories = (categories) => {
     const button = document.createElement("button");
     button.className = "custombtn";
     button.innerHTML = `<img class="icon-img" src="${category.category_icon}" alt="${category.category}"> ${category.category}`;
+
+    // event listener for button click
+
+    button.addEventListener("click", function () {
+     
+      handleCategoryClick(category);
+  });
+
+
     categoriesDiv.appendChild(button);
     });
    }
 
+
+   
+   
+   
+   
 
 
 loadcategories();

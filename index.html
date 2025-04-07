@@ -38,7 +38,7 @@
 </head>
 <body >
     <!-- nav bar section -->
-    <nav class="flex items-center justify-between mx-auto w-11/12 bg-base-100 ">
+    <nav class="flex items-center justify-between mx-auto w-11/12 bg-base-100 mt-5">
         <div class="flex justify-center items-center gap-2">
             <img src="images/logo.webp" alt="" srcset="" class="hidden md:block ">
             <a class=" text-xl font-bold">Peddy</a>
@@ -98,15 +98,17 @@
 
         <!-- pets  -->
 
-        <div class="grid grid-cols-4 gap-4 mt-10  ">
-            <div class="col-span-1 md:col-span-3 p-4 border border-[rgba(19,19,19,0.1)] rounded grid grid-cols-1
-            md:grid-cols-3 gap-4" id="petsDiv">
-                
+        <div class="flex flex-col md:flex-row gap-4 mt-10">
+            
+            <!-- pets container (left side) -->
+            <div class="flex-[3] p-4 border border-[rgba(19,19,19,0.1)] rounded grid grid-cols-1 md:grid-cols-3 gap-4" id="petsDiv">
             </div>
-            <!-- add pets -->
-            <div class="p-4 border  border-[rgba(19,19,19,0.1)] rounded">04</div>
-
-        </div>
+          
+            <!-- liked items container (right side) -->
+            <div class="flex-1 p-4 border border-[rgba(19,19,19,0.1)] rounded grid grid-cols-1 md:grid-cols-2 gap-1 max-h-[500px] overflow-y-auto" id="like">
+            </div>
+          </div>
+          
       </div>
  </section>
 
@@ -115,5 +117,6 @@
 
 <script src="scripts/categories.js"></script>
 <script src="scripts/pets.js"></script>
+<script src="scripts/like.js"></script>
 </body>
 </html>
