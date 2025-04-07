@@ -84,7 +84,7 @@
     </div>
 
     <!-- categories -->
-     <div id="categories" class="flex justify-between mt-10 items-center">
+     <div id="categories" class="flex justify-between mt-10 items-center ">
 
      </div>
      <!-- show pets -->
@@ -100,9 +100,24 @@
 
         <div class="flex flex-col md:flex-row gap-4 mt-10">
             
-            <!-- pets container (left side) -->
+            <!-- pets container  -->
             <div class="flex-[3] p-4 border border-[rgba(19,19,19,0.1)] rounded grid grid-cols-1 md:grid-cols-3 gap-4" id="petsDiv">
             </div>
+
+            <!-- modal -->
+            <dialog id="pet_modal" class="modal">
+                <div class="modal-box">
+                  <div id="pet_modal_content">
+
+                  </div>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
           
             <!-- liked items container (right side) -->
             <div class="flex-1 p-4 border border-[rgba(19,19,19,0.1)] rounded grid grid-cols-1 md:grid-cols-2 gap-1 max-h-[500px] overflow-y-auto" id="like">

@@ -11,13 +11,18 @@ const displaycategories = (categories) => {
    categories.categories.forEach(category => {
     
     const button = document.createElement("button");
-    button.className = "custombtn";
+    button.className = "custombtn ";
     button.innerHTML = `<img class="icon-img" src="${category.category_icon}" alt="${category.category}"> ${category.category}`;
 
     // event listener for button click
 
     button.addEventListener("click", function () {
-     
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll(".custombtn");
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    // Add active class to the clicked button
+    button.classList.add("active");
       handleCategoryClick(category);
   });
 

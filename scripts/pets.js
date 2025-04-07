@@ -36,7 +36,7 @@ const displaypets = (pets) => {
                           <button class="btn bg-white"><img src="images/like.png" alt="like" class="w-5 h-5 " onclick="likeFunction('${pet.image}')"></button>
                           
                             <button class="btn bg-white text-[rgb(14,122,129)]">Adopt</button>
-                            <button class="btn bg-white text-[#0E7A81]">Details</button>
+                            <button class="btn bg-white text-[#0E7A81]" onclick="petDetails(${pet.petId})">Details</button>
                           </div>
                         </div>
                       </div>
@@ -118,7 +118,7 @@ its layout.</p>
                           <button class="btn bg-white"><img src="images/like.png" alt="like" class="w-5 h-5 " onclick="likeFunction('${pet.image}')"></button>
                           
                             <button class="btn bg-white text-[rgb(14,122,129)]">Adopt</button>
-                            <button class="btn bg-white text-[#0E7A81]">Details</button>
+                            <button class="btn bg-white text-[#0E7A81]" onclick="petDetails(${pet.petId})">Details</button>
                           </div>
                         </div>
                       </div>
@@ -127,5 +127,44 @@ its layout.</p>
     });
 }
 
+const petDetails = async (pet) => {
+  const url = `https://openapi.programming-hero.com/api/peddy/pet/${pet}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  displayModal(data);
+};
 
+const displayModal=(data)=>{
+  const pet_modal_content = document.getElementById("pet_modal_content");
+  pet_modal_content.innerHTML = `
+  <div class="card bg-[rgba(19, 19, 19, 0.1)]  shadow-sm">
+  <figure class="px-5 pt-5">
+    <img
+      src="${data.petData.image}"
+      alt="Shoes"
+      class="rounded-xl" />
+  </figure>
+
+  <div class="card-body items-start ">
+
+    <h2 class="text-xl font-bold">${data.petData.pet_name?data.petData.pet_name:"Not Avaiable"}</h2>
+    <p class="text-base text-[rgba(19,19,19,0.7)] flex gap-2 items-center"> <img src="images/category.png" class="w-5 h-5"> Breed: ${data.petData.breed?data.petData.breed:"Not Available"} </p>
+    <p class="text-base text-[rgba(19,19,19,0.7)] flex gap-2 items-center"> <img src="images/birthday.png" class="w-5 h-5">Birth: ${data.petData.date_of_birth?data.petData.date_of_birth:"Not Available"} </p>
+
+    <p class="text-base text-[rgba(19,19,19,0.7)] flex gap-2 items-center"> <img src="images/femenine.png" class="w-5 h-5">Gender: ${data.petData.gender ? data.petData.gender : "Not Available"} </p>
+    <p class="text-base text-[rgba(19,19,19,0.7)] flex gap-2 items-center"> <img src="images/coin.png" class="w-5 h-5">Price: ${data.petData.price ? data.petData.price : "N/A"}$ </p>
+    <p class="text-base text-[rgba(19,19,19,0.7)] flex gap-2 items-center"> Vaccinated: ${data.petData.vaccinated_status } </p>
+    <hr class="border w-11/12 border-[rgba(19,19,19,0.1)] mx-auto ">
+    <p class="text-base text-[rgba(19,19,19,0.7)]"><span class="font-bold">Details:</span> ${data.petData.pet_details ? data.petData.pet_details : "No details available"} </p>
+    </div>
+    
+  `
+
+
+
+
+  const pet_modal = document.getElementById("pet_modal");
+  pet_modal.showModal();
+  console.log(data);
+}
 loadpets()

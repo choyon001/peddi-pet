@@ -11,18 +11,25 @@ body{
     margin-right: 5px;  
   }
   
-  .custombtn{
+  .custombtn {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #4CAF50;
+    background-color: #f0f0f0;
     color: black;
-    padding: 1%;
-    text-align: center;
-    text-decoration: none;
+    padding: 10px;
     font-size: 16px;
+    border: 1px solid #4CAF50;
     border-radius: 12px;
     width: 10%;
-    height: 5%;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+
+  
+  .custombtn.active {
+    background-color: #0E7A81;
+    color: white;
   }
